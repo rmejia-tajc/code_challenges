@@ -53,6 +53,7 @@ def ascending_binary_search(arr, target):
     low_index = 0
 
     while low_index <= high_index:
+        # this need to go in the while loop so it can be redone every loop
         midpoint = low_index + (high_index - low_index) // 2
         if target == arr[midpoint]:
             return midpoint
