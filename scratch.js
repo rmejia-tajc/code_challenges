@@ -1,6 +1,3 @@
-// https://leetcode.com/problems/daily-temperatures/
-
-// naive method:
 var dailyTemperatures = function(T) {
     let arr = []; // to store the days
     for(i=0; i<T.length;i++){ // loop though all the temps
@@ -16,7 +13,7 @@ var dailyTemperatures = function(T) {
     }
     arr.push(0); // for the last temperature, since it will never rise
     return arr;
-};
+}
 
 let T = [73,74,75,71,69,72,76,73];
 
