@@ -8,6 +8,8 @@ function kangaroo(x1, v1, x2, v2) {
     while (k1spot != k2spot || k1spot < k2spot){
         k1spot = k1spot + v1;
         k2spot = k2spot + v2;
+        console.log("k1", k1spot);
+        console.log("k2", k2spot);
         if (k2spot - k1spot > initialDistance){
             break
         }
@@ -19,6 +21,6 @@ function kangaroo(x1, v1, x2, v2) {
     }    
 }
 
-
 // console.log(kangaroo(0, 3, 4, 2));
-console.log(kangaroo(0, 2, 5, 3));
+// console.log(kangaroo(0, 2, 5, 3));
+console.log(kangaroo(10, 3, 20, 2));
