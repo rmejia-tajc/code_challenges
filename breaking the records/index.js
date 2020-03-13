@@ -11,15 +11,21 @@ function breakingRecords(scores){
     let highRecord = scores[0];
 
     for(let i = 1; i < scores.length; i++){
+        console.log("PASS:", i)
         if (scores[i] < lowRecord){
-            scores[i] = lowRecord;
+            lowRecord = scores[i];
             lowRecordCount++;
-        } else if (scores[i] > highRecord){
-            scores[i] = highRecord;
+            console.log("lowRecordCount:", lowRecordCount);
+            console.log("lowRecord:", lowRecord);
+        }
+        if (scores[i] > highRecord){
+            highRecord = scores[i];
             highRecordCount++;
+            console.log("highRecordCount:", highRecordCount);
+            console.log("highRecord:", highRecord);
         }
     }
-    return [lowRecordCount, highRecordCount];
+    return [highRecordCount, lowRecordCount];
 }
 
 
@@ -27,3 +33,5 @@ function breakingRecords(scores){
 
 
 let scores1 = [10, 5, 20, 20, 4, 5, 2, 25, 1]
+
+console.log(breakingRecords(scores1))
